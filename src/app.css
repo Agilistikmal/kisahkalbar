@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bx {
+	@apply align-middle;
+}
+
+.btn-1 {
+	@apply bg-slate-800 px-5 py-2 rounded-lg block;
+}
+
+.btn-2 {
+	@apply bg-blue-500 px-5 py-2 rounded-lg block;
+}
