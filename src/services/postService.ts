@@ -11,7 +11,7 @@ export async function post(
 ) {
 	const image_path = await createPostImagePath(category, kisah, from, mention);
 	await new Promise((r) => setTimeout(r, 2000));
-	const media_id = await client.v1.uploadMedia(image_path);
+	const media_id = await client.v1.uploadMedia(image_path, { mimeType: 'image/jpeg' });
 	const tweet = await client.v2.tweet({
 		media: {
 			media_ids: [media_id]

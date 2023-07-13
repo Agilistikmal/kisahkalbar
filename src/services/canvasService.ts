@@ -45,8 +45,5 @@ export async function createPostImagePath(
 	const formatted_text = list_text.join('\n');
 	ctx.fillText(formatted_text, 1200 / 2, 675 / 4, 1036);
 
-	const uuid = crypto.randomUUID();
-	const image_path = `./temp/${uuid}.png`;
-	canvas.createPNGStream().pipe(fs.createWriteStream(image_path));
-	return image_path;
+	return canvas.toBuffer();
 }
