@@ -1,7 +1,5 @@
 import { createCanvas, loadImage, registerFont, type Image } from 'canvas';
 import type { Category } from '../app';
-import fs from 'fs';
-import crypto from 'crypto';
 
 export async function createPostImagePath(
 	category: Category,
