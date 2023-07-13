@@ -28,5 +28,8 @@
 		"vitest": "^0.32.2"
 	},
 	"type": "module",
-	"dependencies": {}
+	"dependencies": {
+		"canvas": "^2.11.2",
+		"twitter-api-v2": "^1.15.0"
+	}
 }

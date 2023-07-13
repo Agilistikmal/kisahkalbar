@@ -7,9 +7,9 @@
 		</div>
 	</div>
 	<div>
-		<a href="https://instagram.com/kisahkalbar" target="_blank" class="btn-1">
+		<a href="https://twitter.com/kisahkalbar" target="_blank" class="btn-1">
 			<span class="font-semibold">Visit</span>
-			<i class="bx bxl-instagram text-2xl" />
+			<i class="bx bxl-twitter text-2xl" />
 		</a>
 	</div>
 </div>

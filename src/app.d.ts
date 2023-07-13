@@ -9,4 +9,6 @@ declare global {
 	}
 }
 
-export {};
+type Category = 'CINTA' | 'HOROR' | 'KELUHAN' | 'LAINNYA';
+
+export { Category };
