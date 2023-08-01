@@ -1,12 +1,9 @@
 <script lang="ts">
-	import { enhance } from '$app/forms';
-
 	const options = ['CINTA', 'HOROR', 'KELUHAN', 'LAINNYA'];
 	let category: string = 'CINTA';
 	let from: string = '';
 	let mention: string = '';
 	let kisah_pendek: string = '';
-	let kisah: string = '';
 
 	let loading: boolean = false;
 	let success: boolean = false;
@@ -18,7 +15,7 @@
 			headers: {
 				'Content-Type': 'Application/Json'
 			},
-			body: JSON.stringify({ from, mention, kisah_pendek, kisah, category })
+			body: JSON.stringify({ from, mention, kisah_pendek, category })
 		});
 		if (post.status == 200) {
 			success = true;
@@ -54,7 +51,6 @@
 		{#if category == 'CINTA'}
 			<div class="mt-5">
 				<h3 class="font-semibold">Tag twitter orang nye (opsional)</h3>
-				<p class="text-sm">Lebih dari satu? pisahkan pakai koma (,).</p>
 				<input
 					type="text"
 					name="mention"
@@ -90,7 +86,7 @@
 		{/if}
 		<div class="mt-5">
 			<h3 class="font-semibold">
-				Kisah Pendek/Judul <span class="text-xs">({kisah_pendek.length}/250 character)</span>
+				Kisah Pendek <span class="text-xs">({kisah_pendek.length}/250 character)</span>
 			</h3>
 			<span class="text-xs">*Text ini akan di tampilkan pada caption.</span>
 			<textarea
@@ -100,21 +96,6 @@
 				bind:value={kisah_pendek}
 				placeholder="Contoh: Jalan Rusak Kawasan ***"
 				maxlength="250"
-				required
-			/>
-		</div>
-		<div class="mt-5">
-			<h3 class="font-semibold">
-				Ceritekan kisah lengkap e <span class="text-xs">({kisah.length}/1000 character)</span>
-			</h3>
-			<span class="text-xs">*Text ini akan di tampilkan pada gambar.</span>
-			<textarea
-				name="kisah"
-				rows="10"
-				class="w-full btn-1 outline-none mt-1"
-				bind:value={kisah}
-				placeholder="Contoh: Banyak jalan belobang di area *** udah betaon taon tadak dibetolkan. Udah lapor sanak sinik tadak didulikan."
-				maxlength="1000"
 				required
 			/>
 		</div>
