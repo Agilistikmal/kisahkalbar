@@ -1,4 +1,4 @@
-<div class="flex items-center gap-5 justify-between">
+<div class="flex items-center gap-5 justify-between flex-wrap">
 	<div class="flex items-center gap-5">
 		<img src="logo.jfif" alt="Logo" class="w-16 h-16 rounded-full" />
 		<div class="-space-y-1">

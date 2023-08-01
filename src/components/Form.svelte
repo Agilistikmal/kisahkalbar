@@ -29,7 +29,7 @@
 	<h1 class="font-semibold text-xl">Punye kisah ape di Kalimantan Barat?</h1>
 	<div class="mt-5">
 		<h3 class="font-semibold">Pilih Kategori Kisah</h3>
-		<div class="flex items-center gap-2 font-bold mt-1">
+		<div class="flex items-center gap-2 font-bold mt-1 flex-wrap">
 			{#each options as opt}
 				<button class={category == opt ? 'btn-2' : 'btn-1'} on:click={() => (category = opt)}
 					>{opt}</button
